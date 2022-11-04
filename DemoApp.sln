@@ -15,6 +15,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DemoApp.SharedLibrary", "De
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DemoApp.Infrastructure.SqlServer", "DemoApp.Infrastructure.SqlServer\DemoApp.Infrastructure.SqlServer.csproj", "{4804CF67-374D-4634-9688-78EC5CF4852C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{B91514CA-11F3-4E2D-8CE4-4CEBFE1D9514}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{AA1FFC36-7BBC-456C-9C4B-D891EF922F3C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,6 +52,14 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CCC8BC38-C03C-426D-A479-F0E707A5D255} = {B91514CA-11F3-4E2D-8CE4-4CEBFE1D9514}
+		{89AABC7E-D290-4756-B679-F8D17BFA580A} = {B91514CA-11F3-4E2D-8CE4-4CEBFE1D9514}
+		{EDD5BDCE-9C81-4AC5-898F-453D970C352D} = {B91514CA-11F3-4E2D-8CE4-4CEBFE1D9514}
+		{94670AA7-4294-4B1F-930B-0A44F41517B6} = {AA1FFC36-7BBC-456C-9C4B-D891EF922F3C}
+		{AB189F0F-B0EC-4E94-BD3A-972691396FF7} = {B91514CA-11F3-4E2D-8CE4-4CEBFE1D9514}
+		{4804CF67-374D-4634-9688-78EC5CF4852C} = {B91514CA-11F3-4E2D-8CE4-4CEBFE1D9514}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {25761B1B-3FF2-441D-84A2-AEA27ED2224E}

@@ -2,6 +2,8 @@
 
 	<PropertyGroup>
 		<TargetFramework>netcoreapp3.1</TargetFramework>
+		<EnableNETAnalyzers>true</EnableNETAnalyzers>
+		<EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -11,8 +13,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\DemoApp.Domain\DemoApp.Domain.csproj" />
-	  <ProjectReference Include="..\DemoApp.SharedLibrary\DemoApp.SharedLibrary.csproj" />
+		<ProjectReference Include="..\DemoApp.Domain\DemoApp.Domain.csproj" />
+		<ProjectReference Include="..\DemoApp.SharedLibrary\DemoApp.SharedLibrary.csproj" />
 	</ItemGroup>
 
 </Project>

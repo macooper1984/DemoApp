@@ -1,13 +1,16 @@
 using DemoApp.Application;
 using DemoApp.Infrastructure.SqlServer;
 using DemoApp.SharedLibrary.Authentication;
+using DemoApp.SharedLibrary.Caching;
 using DemoApp.SharedLibrary.ExceptionHandling;
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using System;
 using System.Linq;
 
 namespace DemoApp.Api
@@ -27,6 +30,9 @@ namespace DemoApp.Api
             services.AddControllers();
 
             services.AddSwaggerGen();
+
+            services.AddMediatR(AppDomain.CurrentDomain.GetAssemblies());
+            services.AddTransient(typeof(IPipelineBehavior<,>), typeof(CachingPipeline<,>));
 
             services.RegisterApplicationServices();
             services.RegisterDataServices();
