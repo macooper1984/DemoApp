@@ -1,4 +1,5 @@
 using DemoApp.Application;
+using DemoApp.Infrastructure.SqlServer;
 using DemoApp.SharedLibrary.Authentication;
 using DemoApp.SharedLibrary.ExceptionHandling;
 using Microsoft.AspNetCore.Builder;

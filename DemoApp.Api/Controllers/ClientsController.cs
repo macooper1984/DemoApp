@@ -1,4 +1,5 @@
 ﻿using DemoApp.Application.ApiValidation;
+using DemoApp.Application.UseCases;
 using DemoApp.Domain.Models;
 using DemoApp.SharedLibrary.Authentication;
 using MediatR;
