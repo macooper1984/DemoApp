@@ -1,6 +1,6 @@
-using DemoApp.Data.Sql;
+using DemoApp.Application;
+using DemoApp.SharedLibrary.Authentication;
 using DemoApp.SharedLibrary.ExceptionHandling;
-using MediatrDemo.Api.Middleware;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -31,6 +31,7 @@ namespace DemoApp.Api
             services.RegisterDataServices();
 
             services.AddTransient<ExceptionHandlingMiddleware>();
+            services.AddTransient<ValidRequestAuthenticationAttribute>();
 
             services.Configure<ApiBehaviorOptions>(o =>
             {

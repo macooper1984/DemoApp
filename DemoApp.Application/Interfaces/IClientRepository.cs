@@ -1,7 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using DemoApp.Domain.Models;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace DemoApp.Api.Controllers
+namespace DemoApp.Application.Interfaces
 {
     public interface IClientRepository
     {

@@ -1,4 +1,4 @@
-﻿namespace DemoApp.Api.Controllers
+﻿namespace DemoApp.Domain.Models
 {
     public class Client
     {

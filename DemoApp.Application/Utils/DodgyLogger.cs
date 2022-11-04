@@ -1,7 +1,7 @@
 ﻿using DemoApp.SharedLibrary;
 using System;
 
-namespace DemoApp.Application
+namespace DemoApp.Application.Utils
 {
     public class DodgyLogger : ILogger
     {

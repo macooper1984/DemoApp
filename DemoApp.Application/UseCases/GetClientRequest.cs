@@ -1,11 +1,13 @@
-﻿using DemoApp.SharedLibrary.Caching;
+﻿using DemoApp.Application.Interfaces;
+using DemoApp.Domain.Models;
+using DemoApp.SharedLibrary.Caching;
+using DemoApp.SharedLibrary.ExceptionHandling;
 using MediatR;
-using MediatrDemo.Domain.Exceptions;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace DemoApp.Api.Controllers
+namespace DemoApp.Application.UseCases
 {
     public class GetClientRequest : AbstractCacheableQuery<Client>
     {
@@ -30,7 +32,7 @@ namespace DemoApp.Api.Controllers
 
         public async Task<Client> Handle(GetClientRequest request, CancellationToken cancellationToken)
         {
-            if ( request.Identifier == "TESTERROR")
+            if (request.Identifier == "TESTERROR")
             {
                 throw new InvalidOperationException("Make an error occur");
             }

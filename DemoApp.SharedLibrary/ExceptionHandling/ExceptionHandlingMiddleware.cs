@@ -1,12 +1,11 @@
 ﻿using DemoApp.SharedLibrary;
-using DemoApp.SharedLibrary.ExceptionHandling;
 using Microsoft.AspNetCore.Http;
 using System;
 using System.Net;
 using System.Text.Json;
 using System.Threading.Tasks;
 
-namespace MediatrDemo.Api.Middleware
+namespace DemoApp.SharedLibrary.ExceptionHandling
 {
     public class ExceptionHandlingMiddleware : IMiddleware
     {

@@ -1,7 +1,6 @@
-﻿using DemoApp.SharedLibrary.ExceptionHandling;
-using System.Net;
+﻿using System.Net;
 
-namespace MediatrDemo.Domain.Exceptions
+namespace DemoApp.SharedLibrary.ExceptionHandling
 {
     public class NotFoundException : ResponseException
     {

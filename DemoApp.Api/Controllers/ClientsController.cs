@@ -1,4 +1,6 @@
 ﻿using DemoApp.Application.ApiValidation;
+using DemoApp.Domain.Models;
+using DemoApp.SharedLibrary.Authentication;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
@@ -29,6 +31,7 @@ namespace DemoApp.Api.Controllers
 
         [HttpGet]
         [Route("{identifier}")]
+        [ValidRequestAuthentication]
         public async Task<Client> GetClientByIdentifier(
             [ValidClientCode] string identifier)
         {

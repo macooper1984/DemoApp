@@ -2,7 +2,7 @@
 using DemoApp.SharedLibrary.Caching;
 using System.Collections.Generic;
 
-namespace DemoApp.Application
+namespace DemoApp.Application.Utils
 {
     public class DodgyCache : ICache
     {

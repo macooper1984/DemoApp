@@ -1,8 +1,8 @@
-﻿using DemoApp.Api.Controllers;
-using DemoApp.Data.Sql.Repositories;
+﻿using DemoApp.Application.Interfaces;
+using DemoApp.Infrastructure.SqlServer.Repositories;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace DemoApp.Data.Sql
+namespace DemoApp.Infrastructure.SqlServer
 {
     public static class ServicesHelper
     {

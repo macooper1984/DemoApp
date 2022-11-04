@@ -1,11 +1,11 @@
-﻿using DemoApp.Application;
+﻿using DemoApp.Application.Utils;
 using DemoApp.SharedLibrary;
+using DemoApp.SharedLibrary.Caching;
 using MediatR;
-using MediatrDemo.Logic.Pipelines.Advanced;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 
-namespace DemoApp.Data.Sql
+namespace DemoApp.Application
 {
     public static class ServicesHelper
     {

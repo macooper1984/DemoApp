@@ -1,10 +1,8 @@
-﻿using DemoApp.SharedLibrary;
-using DemoApp.SharedLibrary.Caching;
-using MediatR;
+﻿using MediatR;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace MediatrDemo.Logic.Pipelines.Advanced
+namespace DemoApp.SharedLibrary.Caching
 {
     public class CachingPipeline<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
         where TRequest : AbstractCacheableQuery<TResponse>

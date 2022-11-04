@@ -1,9 +1,10 @@
-﻿using DemoApp.Api.Controllers;
+﻿using DemoApp.Application.Interfaces;
+using DemoApp.Domain.Models;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace DemoApp.Data.Sql.Repositories
+namespace DemoApp.Infrastructure.SqlServer.Repositories
 {
     internal class ClientRepository : IClientRepository
     {

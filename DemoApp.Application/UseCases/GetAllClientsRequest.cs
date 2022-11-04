@@ -1,9 +1,11 @@
-﻿using MediatR;
+﻿using DemoApp.Application.Interfaces;
+using DemoApp.Domain.Models;
+using MediatR;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace DemoApp.Api.Controllers
+namespace DemoApp.Application.UseCases
 {
     public class GetAllClientsRequest : IRequest<List<Client>>
     {
