@@ -19,6 +19,8 @@ namespace DemoApp.Application.UseCases
         public string Identifier { get; }
 
         public override string CacheKey => $"GetClient:{Identifier}";
+
+        public override TimeSpan CacheDuration => TimeSpan.FromMinutes(10);
     }
 
     public class GetClientRequestHandler : IRequestHandler<GetClientRequest, Client>
@@ -26,6 +28,33 @@ namespace DemoApp.Application.UseCases
         private readonly IClientRepository repo;
 
         public GetClientRequestHandler(IClientRepository repo)
+        {
+            this.repo = repo;
+        }
+
+        public async Task<Client> Handle(GetClientRequest request, CancellationToken cancellationToken)
+        {
+            if (request.Identifier == "TESTERROR")
+            {
+                throw new InvalidOperationException("Make an error occur");
+            }
+
+            var result = await repo.GetClient(request.Identifier);
+
+            if (result == null)
+            {
+                throw new NotFoundException($"Client could not be found: {request.Identifier}");
+            }
+
+            return result;
+        }
+    }
+
+    public class GetClientRequestHandler2 : IRequestHandler<GetClientRequest, Client>
+    {
+        private readonly IClientRepository repo;
+
+        public GetClientRequestHandler2(IClientRepository repo)
         {
             this.repo = repo;
         }

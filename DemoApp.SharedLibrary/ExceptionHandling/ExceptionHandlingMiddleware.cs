@@ -39,7 +39,6 @@ namespace DemoApp.SharedLibrary.ExceptionHandling
             context.Response.ContentType = "application/json";
             context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
 
-
             var body = new ErrorResponse("I'm not telling you what went wrong, but something did!!!");
             await context.Response.WriteAsync(JsonSerializer.Serialize(body));
         }

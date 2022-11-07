@@ -7,6 +7,7 @@ namespace DemoApp.Application.Interfaces
     public interface IClientRepository
     {
         Task<List<Client>> GetAllClients();
+
         Task<Client> GetClient(string identifier);
     }
 }
