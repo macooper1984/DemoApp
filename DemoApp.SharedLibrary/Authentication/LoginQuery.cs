@@ -1,5 +1,6 @@
 ﻿using DemoApp.SharedLibrary.Caching;
 using MediatR;
+using System;
 
 namespace DemoApp.SharedLibrary.Authentication
 {
@@ -13,6 +14,8 @@ namespace DemoApp.SharedLibrary.Authentication
         public string Identifier { get; }
 
         public override string CacheKey => $"Login:{Identifier}";
+
+        public override TimeSpan CacheDuration => TimeSpan.FromMinutes(15);
     }
 
     public class LoginQueryHandler : RequestHandler<LoginQuery, bool>
